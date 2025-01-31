@@ -20,5 +20,5 @@ server.post('/revistas', (request, reply)=>{
 })
 
 server.listen({
-    port: 2626,
+    port: 3333,
 })
