@@ -1,0 +1,9 @@
+POST http://localhost:3333/revistas
+Content-Type: application/json
+
+{
+    "titulo": "larrissa emanueli milho",
+    "editora": "magazzin zukenberg",
+    "preco": 299,
+    "ano": 1842
+}
