@@ -7,3 +7,19 @@ Content-Type: application/json
     "preco": 299,
     "ano": 1842
 }
+
+###
+
+GET http://localhost:3333/revistas
+
+###
+
+PUT http://localhost:3333/revistas/410b5764-5fbb-4f88-8e6e-fde5ae0b9e28
+Content-Type: application/json
+
+{
+    "titulo": "monark: nazista idiota ou idiota?",
+    "editora": "CNN (Casca de Nada Nilinista)",
+    "preco": 9999,
+    "ano": 1945
+}

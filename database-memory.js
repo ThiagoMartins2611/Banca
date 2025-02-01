@@ -13,7 +13,18 @@ export class DatabaseMemory {
     }
 
     list(){
-        return this.#revistas.values()
+        return Array.from(this.#revistas.entries()).map((revistaArray)=>{
+
+        const id = revistaArray[0]
+        const data = revistaArray[1]
+
+        return{
+            id,
+            ...data
+        }
+        
+        });
+ 
     }
 
     delete(id){
