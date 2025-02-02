@@ -7,12 +7,14 @@ const database = new DatabaseMemory()
 
 server.post('/revistas', (request, reply)=>{
 
-    const {titulo, editora, preco, ano} = request.body
+    const {titulo, capa, editora, escritor, preco, ano} = request.body
 
 
     database.create({
         titulo: titulo,
+        capa: capa,
         editora: editora,
+        escritor: escritor,
         preco: preco,
         ano: ano,
     });
@@ -36,11 +38,13 @@ server.get('/revistas', (request, reply)=>{
 server.put('/revistas/:id', (request, reply)=>{
 
     const revistaId = request.params.id;
-    const {titulo, editora, preco, ano} = request.body;
+    const {titulo, capa, editora, escritor, preco, ano} = request.body;
 
    const revistas = database.update(revistaId, {
         titulo: titulo,
+        capa: capa,
         editora: editora,
+        escritor: escritor,
         preco: preco,
         ano: ano,
     })

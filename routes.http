@@ -3,7 +3,9 @@ Content-Type: application/json
 
 {
     "titulo": "larrissa emanueli milho",
+    "capa": "EXTRA NEW, GANHE UM MILHÃO",
     "editora": "magazzin zukenberg",
+    "escritor": "raimundo o brabo",
     "preco": 299,
     "ano": 1842
 }
@@ -18,26 +20,29 @@ GET http://localhost:3333/revistas
 
 ###
 
-PUT http://localhost:3333/revistas/410b5764-5fbb-4f88-8e6e-fde5ae0b9e28
+PUT http://localhost:3333/revistas/8574dc79-3bec-4165-bd3d-3ae8faf44d33
 Content-Type: application/json
 
 {
     "titulo": "monark: a burrice encarnada",
+    "capa": "Nazismo ou Pura idiotice?",
     "editora": "CNN (Casca de Nada Nilinista)",
+    "escritor": "Nando Moura",
     "preco": 9999,
     "ano": 1945
 }
 
 ###
 
-PATCH http://localhost:3333/revistas/d2b00db9-b1e7-4c97-82c6-b838ba742376
+PATCH http://localhost:3333/revistas/5276cf04-3251-4c50-a15a-d51ef158ce29
 Content-Type: application/json
 
 {
     "preco": 2626,
-    "ano": 2626
+    "ano": 2626,
+    "titulo": "MORTE AOS PRATEADOS"
 }
 
 ###
 
-DELETE http://localhost:3333/revistas/a86e51f5-9f9e-4c41-ae04-e7f7eee28826
+DELETE http://localhost:3333/revistas/a2f7ccd7-21a5-4a5d-8544-c25e84ae368f
