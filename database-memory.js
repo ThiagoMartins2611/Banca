@@ -12,7 +12,7 @@ export class DatabaseMemory {
         this.#revistas.set(id, revista)
     }
 
-    list(){
+    list(search){
         return Array.from(this.#revistas.entries()).map((revistaArray)=>{
 
         const id = revistaArray[0]
@@ -23,8 +23,22 @@ export class DatabaseMemory {
             ...data
         }
         
+        })
+
+
+        .filter(revista => {
+
+            if(search){
+                return revista.titulo.includes(search)
+            }
+
+            return true
         });
  
+    }
+
+    getById(id){
+        return this.#revistas.get(id)
     }
 
     delete(id){

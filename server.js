@@ -25,8 +25,8 @@ server.post('/revistas', (request, reply)=>{
 
 server.get('/revistas', (request, reply)=>{
 
-    const revistas = database.list();
- 
+    const search = request.query.search
+    const revistas = database.list(search);
 
     return reply.status(200).send, revistas;
 });
@@ -49,9 +49,27 @@ server.put('/revistas/:id', (request, reply)=>{
 });
 
 
+server.patch('/revistas/:id', (request, reply)=>{
 
+    const revistasId = request.params.id;
+    const atualization = request.body;
+    const revistaAntiga = database.getById(revistasId);
+    const newRevista = {...revistaAntiga, ...atualization}
+       
+    database.update(revistasId, newRevista);
 
+     
+    return reply.status(204).send()
+});
 
+server.delete('/revistas/:id', (request, reply)=>{
+
+    const revistaId = request.params.id
+
+    database.delete(revistaId)
+
+    return reply.status(204).send()
+})
 
 
 server.listen({

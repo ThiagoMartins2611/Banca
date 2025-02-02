@@ -10,6 +10,10 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:3333/revistas?search=larrissa
+
+###
+
 GET http://localhost:3333/revistas
 
 ###
@@ -18,8 +22,22 @@ PUT http://localhost:3333/revistas/410b5764-5fbb-4f88-8e6e-fde5ae0b9e28
 Content-Type: application/json
 
 {
-    "titulo": "monark: nazista idiota ou idiota?",
+    "titulo": "monark: a burrice encarnada",
     "editora": "CNN (Casca de Nada Nilinista)",
     "preco": 9999,
     "ano": 1945
 }
+
+###
+
+PATCH http://localhost:3333/revistas/d2b00db9-b1e7-4c97-82c6-b838ba742376
+Content-Type: application/json
+
+{
+    "preco": 2626,
+    "ano": 2626
+}
+
+###
+
+DELETE http://localhost:3333/revistas/a86e51f5-9f9e-4c41-ae04-e7f7eee28826
